@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woju</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            font-family: "Lato", sans-serif;
+        }
+        .section {
+            width: 100%;  
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .section1 {
+            background-color: #2b2b2b;
+            color: white;
+        }
+        .section2 {
+            background-color: #FFDE6A;
+            color: black;
+        }
+        .section3 {
+            background-color: #F5F8FF;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 0 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        h2 {
+            font-size: 2rem;
+            margin: 0 0 1rem 0;
+        }
+        .section2-header, .section3-header {
+            margin: 2% 0;
+        }
+        .section2-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 100%;
+        }
+        .section2-box {
+            flex: 1 1 300px;
+            max-width: 30%;
+            margin: 10px;
+            padding: 20px;
+            background-color: white;
+            color: black;
+            border-radius: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .section3-content {
+            width: 100%;
+            max-width: 80%;
+            background-color: #075ea6;
+            padding: 10%;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .section3-inner-content {
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            width: 100%;
+        }
+        .section3 textarea {
+            width: 60%;
+            height: 100%;
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 0%;
+            resize: none;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 5%;
+            font-size: large;
+        }
+        .submit-button {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: #0ffa93;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+            .section2-box {
+                flex: 1 1 45%;
+                max-width: 45%;
+            }
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            .section2-box {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
+            .section2-header, .section3-header {
+                font-size: 1.2rem;
+                margin: 5% 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="section section1">
+        <div class="container">
+           <h1>Woju is your words judgment platform</h1> 
+        </div>
+    </div>
+    <div class="section section2">
+        <div class="container">
+            <h2 class="section2-header">Note Before Using The Prediction at Woju</h2>
+            <div class="section2-content">
+                <div class="section2-box">
+                    <h3>Predictions May Lead to Inaccurate Conclusions</h3>
+                    <p>Due to Woju's simplified model, it may produce inaccurate predictions. 
+                        We advise against relying on Woju for drawing conclusions. 
+                        Please utilize it solely for study purposes. </p>
+                </div>
+                <div class="section2-box">
+                    <h3>Your Input will be Saved on the Server</h3>
+                    <p>The text you submit will be stored in our database for research purposes. 
+                        Please avoid sharing sensitive information.
+                    </p>
+                </div>
+                <div class="section2-box">
+                    <h3>Woju is Free to use for Everyone</h3>
+                    <p>Woju is intended solely for research and study purposes for Woju's creators. 
+                        We do not charge any fees, so please enjoy using Woju.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section3">
+        <div class="container">
+            <h2 class="section3-header">Ready to use The Woju's Prediction?</h2>
+            <div class="section3-content">
+                <div class="section3-inner-content">
+                    <form action="/predict" method="POST">
+                        <h3 style="color: white; margin-bottom: 5%;">Input Your Text in White Area Below</h3>
+                        <textarea name="input_user" rows="4"></textarea>
+                        <br>
+                        <button class="submit-button" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
